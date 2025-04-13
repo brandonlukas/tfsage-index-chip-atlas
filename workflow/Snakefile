@@ -1,0 +1,14 @@
+configfile: "config/config.yaml"
+
+
+include: "rules/resources.smk"
+include: "rules/download.smk"
+include: "rules/data.smk"
+
+
+rule all:
+    input:
+        expand(
+            rules.embeddings.output[0],
+            threshold=["05", "10", "20"],
+        ),

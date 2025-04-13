@@ -1,0 +1,6 @@
+downloads_dir: "/mnt/wdssd/tfsage/chip_atlas/downloads"
+data_dir: "/mnt/wdssd/tfsage/chip_atlas/data"
+
+resources:
+  experimentList: "resources/experimentList.tab"
+  experimentList_parquet: "/mnt/wdssd/tfsage/chip_atlas/resources/experimentList.parquet"
