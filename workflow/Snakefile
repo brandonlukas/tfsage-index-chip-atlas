@@ -10,5 +10,5 @@ rule all:
     input:
         expand(
             rules.embeddings.output[0],
-            threshold=["05", "10", "20"],
+            threshold=["05"],
         ),

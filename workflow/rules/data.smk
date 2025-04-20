@@ -3,7 +3,6 @@ import dask.dataframe as dd
 
 
 def collect_experiments(wildcards):
-    # .query("(TrackClass == 'TFs and others') | (CellClass == 'Uterus')")
     path = checkpoints.format_experimentList.get().output[0]
     experiments = dd.read_parquet(path)["ID"].compute()
     template = rules.download.output[0]
