@@ -35,7 +35,7 @@ rule features_gene:
 
 rule embeddings:
     input:
-        rp_matrix=rules.features_gene.output[0],
+        rp_matrix=rules.features_tss.output[0],
         metadata=rules.format_experimentList.output[0],
     output:
         os.path.join(config["data_dir"], "{threshold}/embeddings.parquet"),
